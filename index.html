@@ -6,8 +6,29 @@
 </head>
 
 <body>
-    <h1>Wellcome to PSB</h1>
-    <h2>Day 1 learn Html</h2>
+    <h1>Welcome to PSB</h1>
+    <form action="/login" method="POST">
+        <fieldset>
+            <legend>Log in to the system</legend>
+            <p>
+                <label for="username">User name:</label>
+                <input type="text" id="username" required placeholder="username">
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required minlength="6">
+            </p>
+            <p>
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember</label>
+            </p>
+            <div>
+                <button type="submit">submit</button>
+                <button type="button">Register a new account</button>
+                <button type="button">Forgot password?</button>
+            </div>
+        </fieldset>
+    </form>
 </body>
 
 </html>
