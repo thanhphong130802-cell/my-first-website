@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - PSB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top-bar">Free shipping for orders over $50</div>
+    <header class="navbar">
+        <div class="logo">MY-LOGO</div>
+        <nav>
+            <ul class="nav-links">
+                <li>Man</li>
+                <li>Women</li>
+                <li>Kids</li>
+                <li>Sale</li>
+            </ul>
+        </nav>
+        <div class="icons">🔍 🛒</div>
+        <div class="cart">
+            🛒 Shopping cart: <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>PSB</h1>
+            <p>New product for new customers</p>
+            <button class="cta-button">Shop Now</button>
+        </div>
+    </section>
+    <section class="product-grid">
+        <div class="product-cart">
+            <div class="product-img"></div>
+            <h3>Product name 1</h3>
+            <p class="price">$29.99</p>
+            <button class="btn-add">Add to cart</button>
+        </div>
+    </section>
+    <div id="product-list" class="product-grid">
+    </div>
+    <script src="script.js">
+        function displayProducts() {
+            productContainer.innerHTML = products.map(product => `
+        <div class="product-card">
+            <div class="product-img" onclick="viewDetail('${product.name}')"></div>
+            <h3 onclick="viewDetail('${product.name}')">${product.name}</h3>
+            <p>${product.price}</p>
+            <button class="btn-add">Add to cart</button>
+        </div>
+    `).join('');
+        }
+    </script>
+</body>
+
+</html>
